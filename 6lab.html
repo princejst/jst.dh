@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>优美鲁大</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('2.webp'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #rotate {
+            perspective: 600px;
+            margin: 10px auto;
+        }
+
+        h3 {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .photo {
+            width: 580px;
+            height: 420px;
+            list-style: none;
+            margin: 10px auto;
+            position: relative;
+            transform: rotateX(-35deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            transition: all 25s linear 0.3s;
+        }
+
+        .photo>li,
+        img {
+            width: 200px;
+            height: 300px;
+        }
+
+        .photo>li {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .photo>li:nth-child(1) {
+            transform: rotateY(0) translateZ(150px);
+        }
+
+        .photo>li:nth-child(2) {
+            transform: rotateY(90deg) translateZ(150px);
+        }
+
+        .photo>li:nth-child(3) {
+            transform: rotateY(180deg) translateZ(150px);
+        }
+
+        .photo>li:nth-child(4) {
+            transform: rotateY(270deg) translateZ(150px);
+        }
+
+        .photo:hover {
+            transform: rotateX(-35deg) rotateY(3000deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="rotate">
+        <h3>优美鲁大展示</h3>
+        <ul class="photo">
+            <li><img src="0.jpg" alt=""></li>
+            <li><img src="9.jpg" alt=""></li>
+            <li><img src="17.jpg" alt=""></li>
+            <li><img src="27.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+
+</html>    
